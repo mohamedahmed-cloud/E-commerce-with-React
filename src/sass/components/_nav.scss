@@ -1,0 +1,90 @@
+@use "sass:math";
+@use "sass:color";
+@use '../base';
+@use '../utils';
+
+.nav {
+    max-width: 69.375rem;
+    margin-inline: auto;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: calc(100% - 3rem);
+        height: 1px;
+        bottom: 0;
+        background-color: base.$clr-very-light-gray;
+        opacity: 0.2;
+    }
+}
+
+.nav-list {
+    position: absolute;
+    visibility: hidden;
+    display: block;   
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    background-color: base.$clr-white;
+    transition: all .26s ease-in-out;
+    z-index: 1;    
+
+    @include utils.mQ(61.25rem) {
+        display: flex;
+        position: relative;
+        visibility: visible;
+        top: 0;
+        background-color: inherit;
+        color: base.$clr-white;
+        justify-content: space-evenly;      
+    }
+}
+
+.nav-list-item {
+    text-align: center;
+    padding-bottom: 1.2rem;
+
+    @include utils.mQ(61.25rem) {
+        padding-bottom: 0;
+    }
+}
+
+.nav-list-show {
+    visibility: visible;
+    padding: 2rem;
+   
+    @include utils.mQ(61.25rem) {
+        visibility: visible;  
+        transition: none;   
+        padding: 0;  
+    }
+}
+
+.menu-ctrl {
+    flex: 1 1 65%;
+
+    @include utils.mQ(38.75rem) {
+        justify-content: start;
+        gap: 2rem;
+    }
+}
+
+.cart-container {
+    flex: 1 1 20%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.cart-total {
+    color: base.$clr-peach;
+    font-size: base.$fs-14;
+    font-weight: 800;
+    position: absolute;
+    top: -0.5rem;
+}
+
+.hide-cart-total {
+    display: none;
+}

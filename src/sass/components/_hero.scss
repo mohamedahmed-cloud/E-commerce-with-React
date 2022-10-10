@@ -1,0 +1,104 @@
+@use "sass:math";
+@use "sass:color";
+@use "../base";
+@use "../utils";
+
+.hero {    
+    background-image: url('../../assets/home/mobile/image-header.jpg');
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include utils.mQ(38.75rem) {
+        background-image: url('../../assets/home/tablet/image-header.jpg');
+        background-position: 100% 60%;
+    }
+
+    @include utils.mQ(61.25rem) {
+        background-size: contain;
+    }
+}
+
+.hero-content-container-shared {   
+        padding-block: 2.25rem;
+        padding-inline: 1.5rem;
+        max-width: 23.6875rem;
+        margin-inline: auto;
+
+        @include utils.mQ(38.75rem) {
+            padding-block: 6rem;
+        }
+}
+
+.hero-container {
+    max-width: 69.375rem;
+    margin-inline: auto;
+}
+
+.hero-content-container {
+    padding-block: 6rem 6.2rem;
+    padding-inline: 1.5rem;
+    max-width: 27.75rem;
+    margin-inline: auto;
+
+    @include utils.mQ(61.25rem) {
+        margin-inline-start: 0;
+        padding-block: 6.4rem 12.4rem;
+    }
+}
+
+.hero-title {
+    font-size: base.$fs-14;
+    color: base.$clr-white;
+    opacity: 0.4;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-align: center;
+    font-weight: 400;
+    margin-block: 1rem;
+
+    @include utils.mQ(61.25rem) {
+        text-align: start;
+    }
+}
+
+.hero-title-secondary {
+    font-size: base.$fs-36;
+    color: base.$clr-white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.1;
+
+    @include utils.mQ(38.75rem) {
+        font-size: base.$fs-56;
+        line-height: 1.04;
+    }
+
+    @include utils.mQ(61.25rem) {
+        text-align: start;
+        letter-spacing: 2px;
+    }
+}
+
+.hero-title-secondary-shared {
+    font-size: base.$fs-28;
+    letter-spacing: 2px;
+    @include utils.mQ(38.75rem) {
+        font-size: base.$fs-40;       
+    }
+}
+
+.hero-content {
+    font-size: base.$fs-15;
+    color: base.$clr-white;
+    opacity: 0.75;
+    text-align: center;
+    line-height: 1.6;
+    margin-block: 2rem;
+
+    @include utils.mQ(61.25rem) {
+        text-align: start;
+        padding-right: 2.5rem;
+    }
+}

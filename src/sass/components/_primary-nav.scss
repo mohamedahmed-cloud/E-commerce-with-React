@@ -1,0 +1,51 @@
+@use "sass:math";
+@use "sass:color";
+@use "../base";
+@use "../utils";
+
+.primary-nav-list {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    margin-block-start: 4.5rem;
+
+    @include utils.mQ(38.75rem) {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    @include utils.mQ(61.25rem) {
+        padding-block-start: 5.8rem;
+        padding-block-end: 7.5rem;
+    }
+}
+
+.primary-nav-list-item {
+    background-color: base.$clr-very-light-gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-nav-image {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    top: -2rem;
+    object-fit: contain;
+
+    @include utils.mQ(61.25rem) {
+        width: 54%;
+        top: -4rem;
+    }
+}
+
+.primary-nav-heading {
+    text-align: center;
+    position: relative;
+    top: -2rem;
+    text-transform: uppercase;
+}

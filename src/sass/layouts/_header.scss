@@ -1,0 +1,11 @@
+@use '../base';
+@use '../utils';
+
+.main-navigation {
+    background-color: base.$clr-almost-black;
+    position: relative;
+}
+
+.header {
+    background-color: base.$clr-almost-black;
+}

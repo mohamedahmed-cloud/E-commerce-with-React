@@ -1,0 +1,152 @@
+@use "sass:math";
+@use "sass:color";
+@use "../base";
+@use "../utils";
+
+.return {
+    padding-inline: 1.5rem;
+    position: relative;
+    top: 1.5rem;
+
+    @include utils.mQ(38.75rem) {
+        padding-inline: 2.5rem;
+    }
+}
+
+.btn-return {
+    top: 0;
+    left: 0;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: base.$clr-almost-black;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: 0.25em;
+    }
+}
+
+.product-detail {
+
+    .product-title,
+    .product-title-secondary,
+    .shared-product-text {
+        text-align: left;
+    }
+}
+
+
+.add-to-cart {
+    padding-block: 0;
+}
+
+.product-cost {
+    font-size: base.$fs-18;
+    font-weight: 700;
+    letter-spacing: 1.29px;
+}
+
+.cart-divider {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.quantity-control {
+    background-color: base.$clr-light-gray;
+    flex: 1 1 40%;
+    max-width: 7.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features-title,
+.extra-title,
+.other-products-title,
+.other-product-item-title {
+    font-size: base.$fs-24;
+    line-height: 1.5;
+    letter-spacing: 0.86px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.other-products-title,
+.other-product-item-title {
+    text-align: center;
+}
+
+.extras-list {
+    margin-block: 2rem;
+    & li + li {
+        margin-block-start: .5rem;
+    }
+    @include utils.mQ(38.75rem) {
+        flex: 1 1 50%;
+    }
+}
+
+.extra-title {
+    @include utils.mQ(38.75rem) {
+        flex: 1 1 50%;
+        text-align: left;
+    }
+}
+
+.other-product-item-title {
+	margin-block: 1rem;
+}
+
+.features-content {
+    padding-top: 1rem;
+    font-size: base.$fs-15;
+    line-height: 1.7;
+}
+
+.extras {
+    @include utils.mQ(38.75rem) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.extra-list-item {
+    display: flex;
+    gap: 2rem;
+}
+
+.other-products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 3rem;
+    margin-block-start: 3rem;
+
+    @include utils.mQ(61.25rem) {
+        .btn-view-product {
+            margin-inline: auto;
+        }        
+    }
+}
+
+.decorative-image-list {
+    display: grid;
+    gap: 1rem;
+
+    @include utils.mQ(38.75rem) {
+        grid-template-columns: 2fr 3fr;
+    }
+}
+
+.shared-products-picture {
+    @include utils.mQ(38.75rem) {
+        &:nth-child(3) {
+            grid-area: 1/2/3/3;
+        }
+
+    }
+}

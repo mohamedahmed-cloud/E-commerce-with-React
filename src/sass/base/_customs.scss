@@ -1,0 +1,76 @@
+@use "sass:math";
+@use "sass:color";
+@use "../utils";
+
+
+
+$clr-orange: hsl(22, 65%, 57%);
+$clr-almost-black: hsla(0, 0%, 6%, 0.955);
+$clr-light-gray: hsl(0, 0%, 95%);
+$clr-very-light-gray: hsl(0, 0%, 98%);
+$clr-peach: hsl(21, 94%, 75%);
+$clr-black: hsl(0, 0%, 0%);
+$clr-white: hsl(0, 0%, 100%);
+
+
+
+$fs-12: utils.calculateRem(12);
+$fs-13: utils.calculateRem(13);
+$fs-14: utils.calculateRem(14);
+$fs-15: utils.calculateRem(15);
+$fs-16: utils.calculateRem(16);
+$fs-18: utils.calculateRem(18);
+$fs-24: utils.calculateRem(24);
+$fs-28: utils.calculateRem(28);
+$fs-36: utils.calculateRem(36);
+$fs-40: utils.calculateRem(40);
+$fs-56: utils.calculateRem(56);
+
+.container {
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+
+    @include utils.mQ(38.75rem) {
+        padding-inline: 2.5rem;
+    }
+}
+
+.padding-inline {
+    padding-inline: 2.5rem;
+}
+
+.border-radius {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.text-orange {
+    color: $clr-orange;
+    letter-spacing: 1px;
+}
+
+.text-white {
+    color: $clr-white;
+    letter-spacing: 1px;
+}
+
+.bg-orange {
+    background-color: $clr-orange;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

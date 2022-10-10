@@ -1,0 +1,14 @@
+.main {
+    max-width: 69.375rem;
+    margin-inline: auto;
+}
+.loading-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    gap: 1rem;
+    padding-inline: 1rem;
+}

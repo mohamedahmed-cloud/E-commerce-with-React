@@ -1,0 +1,155 @@
+@use "sass:math";
+@use "sass:color";
+@use "../base";
+@use "../utils";
+
+.btns {
+    background-color: inherit;
+    border: none;
+    outline: none;
+
+    &:focus,
+    &:hover {
+        color: base.$clr-white;
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: 0.15em;
+    }
+}
+
+.btn-view-product,
+.btn-add-to-cart {
+    padding: .8rem 1rem;
+    background: base.$clr-orange;
+    font-size: base.$fs-14;
+    display: block;
+    margin-inline: auto;
+    max-width: 10rem;
+    color: base.$clr-white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: -0.5em;
+    }
+
+    @include utils.mQ(61.25rem) {
+        margin-inline-start: 0;
+    }
+}
+
+.btn-menu-control {
+    @include utils.mQ(61.25rem) {
+        display: none;
+    }
+}
+
+.primary-nav-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    position: relative;
+    top: -1rem;
+    outline: none;
+    border: none;
+    color: base.$clr-orange;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: 0.35em;
+    }
+}
+
+.nav-list-item-btn,
+.logo-btn {
+    color: base.$clr-almost-black;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: 0.15em;
+    }
+
+    @include utils.mQ(61.25rem) {
+        color: base.$clr-white;
+    }
+}
+
+.logo-btn {
+    color: base.$clr-white;
+}
+
+.btn-products {
+    display: block;
+    margin-inline: auto;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    margin-block: 3rem;
+}
+
+.btn-bg-black {
+    background-color: base.$clr-almost-black;
+}
+
+.btn-bg-transparent {
+    background-color: inherit;
+    border: 1px solid base.$clr-almost-black;
+    color: base.$clr-almost-black;
+    margin: 0;
+}
+
+.btn-social {
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: 0.15em;
+    }
+
+}
+
+.btn-cart {
+    border: none;
+    background-color: inherit;
+    outline: none;
+    padding: 1rem;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: -0.5em;
+    }
+}
+
+
+.btn-add-to-cart {
+    flex: 1 1 60%;
+    background-color: base.$clr-orange;
+    color: base.$clr-white;
+
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: dashed base.$clr-orange;
+        outline-offset: 0.15em;
+    }
+}
+
+.hide {
+    display: none;
+}

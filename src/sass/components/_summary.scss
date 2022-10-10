@@ -1,0 +1,187 @@
+@use "sass:math";
+@use "sass:color";
+@use "../base";
+@use "../utils";
+
+.summary {
+    background: base.$clr-white;
+    margin-block-start: 8rem;
+
+    @include utils.mQ(61.25rem) {
+        margin-block-start: 0;
+        flex: 1 1 40%;
+    }
+}
+.display-totals {
+    margin-block-start: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary-title {
+    font-size: base.$fs-18;
+    color: base.$clr-almost-black;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-block-end: 1rem;
+}
+
+.item-quantity {
+    flex: 1 1 35%;
+}
+
+.cart-unit-cost {
+    font-size: base.$fs-14;
+    font-weight: 800;
+    color: base.$clr-almost-black;
+    opacity: 0.5;
+}
+
+.totals {
+    font-size: base.$fs-15;
+    text-transform: uppercase;
+    font-weight: 800;
+    opacity: 0.5;
+    color: base.$clr-almost-black;
+
+    .net,
+    .shipping-amount,
+    .vat-amount,
+    .grand-amount {
+        color: base.$clr-black;
+        opacity: 1;
+    }
+}
+
+.pay-btn {
+    border: none;
+    outline: none;
+    padding: 1rem;
+
+    &:focus,
+    &:hover {
+        color: base.$clr-white;
+        cursor: pointer;
+        outline: dashed currentColor;
+        outline-offset: -0.5em;
+    }
+}
+
+.check-mark-wrapper-img {
+    padding: 1rem;
+    background-color: base.$clr-orange;
+    border-radius: 50%;
+}
+
+.final-order {
+    // display: none;
+    position: relative;
+    background-color: base.$clr-white;
+    // top: 2rem;
+    left: 0;
+    width: 90%;
+    max-width: 33.75rem;
+    // margin-left: -45%;
+}
+
+.show-final-order {
+    left: 0;
+    display: flex;
+    padding-inline: 1rem;
+    justify-content: center;
+    align-items: center;
+    //  top: 2rem;
+}
+
+.btn-modal {
+    background-color: base.$clr-orange;
+    color: base.$clr-white;
+    display: block;
+    text-align: center;
+    padding-block: 1rem;
+    margin-block-start: 2rem;
+    text-decoration: none;
+}
+
+.card-sect1-container {
+    background-color: base.$clr-light-gray;
+    padding-block: 1rem;
+
+    @include utils.mQ(38.75rem) {
+        flex: 1 1 60%;       
+    }
+}
+
+.card-sect1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-block-end: 1rem;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 50%;
+        height: 3px;
+        background-color: base.$clr-almost-black;
+        left: 50%;
+        margin-left: -25%;
+        bottom: -.5rem;
+        opacity: .4;
+    }
+}
+
+.cart-extra-content {
+    text-align: center;
+}
+
+.card-sect2-container {
+    color: base.$clr-white;
+    background: base.$clr-almost-black;
+    padding: 1rem;
+
+    @include utils.mQ(38.75rem) {
+        flex: 1 1 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.grand-total-title {
+    font-size: base.$fs-15;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.grand-amount {
+    font-size: base.$fs-18;
+    font-weight: 800;
+}
+
+.final-order-title {
+    font-size: base.$fs-24;
+    font-weight: 700;
+    letter-spacing: 0.86px;
+    text-transform: uppercase;
+    margin-block: 1rem;
+
+}
+
+.check-mark-wrapper {
+    margin-block: 1rem;
+}
+
+.thank-you-note {
+    font-size: base.$fs-15;
+    padding-block-end: 1rem;
+}
+
+.thank-you-card {
+    @include utils.mQ(38.75rem) {
+        display: flex;
+    }
+}
